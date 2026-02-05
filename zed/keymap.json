@@ -7,7 +7,7 @@
 // from the command palette.
 [
     {
-        "context": "Workspace && !Terminal",
+        "context": "Workspace",
         "bindings": {
             // "shift shift": "file_finder::Toggle"
         }
@@ -20,19 +20,21 @@
     },
     // Custom Space leader key bindings (adicione isso no final do seu keymap.json, antes do último colchete)
     {
-        "context": "Workspace && !Terminal"",
+        "context": "Workspace && !Terminal",
         "use_key_equivalents": true,
         "bindings": {
-            "space e": "workspace::ToggleLeftDock",
+            "space e": "workspace::ToggleRightDock",
+            "space k": "project_panel::ToggleFocus",
             "space space": "file_finder::Toggle",
             "space ,": "tab_switcher::Toggle",
             "space s g": "pane::DeploySearch",
             "space p": "command_palette::Toggle",
-            "space g g": "git_panel::ToggleFocus"
+            "space g g": "git_panel::ToggleFocus",
+            "ctrl-t": "workspace::ToggleBottomDock"
         }
     },
     {
-        "context": "Editor",
+        "context": "Editor && !Terminal",
         "use_key_equivalents": true,
         "bindings": {
             "space g i": "editor::GoToImplementation",
@@ -49,10 +51,31 @@
         }
     },
     {
+        "context": "VimControl",
+        "use_key_equivalents": true,
+        "bindings": {
+            "ctrl-t": "workspace::ToggleBottomDock"
+        }
+    },
+    {
         "context": "Workspace",
         "use_key_equivalents": true,
         "bindings": {
-            "ctrl-t": "terminal_panel::Toggle"
+            // "ctrl-t": "terminal_panel::ToggleFocus"
+        }
+    },
+    {
+        "context": "ProjectPanel",
+        "use_key_equivalents": true,
+        "bindings": {
+            "n": "project_panel::NewFile",
+            "f": "project_panel::NewDirectory",
+            "r": "project_panel::Rename",
+            "d": "project_panel::Delete",
+            "x": "project_panel::Cut",
+            "c": "project_panel::Copy",
+            "p": "project_panel::Paste"
         }
     }
 ]
+
