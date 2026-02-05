@@ -6,76 +6,82 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
-    {
-        "context": "Workspace",
-        "bindings": {
-            // "shift shift": "file_finder::Toggle"
-        }
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
     },
-    {
-        "context": "Editor && vim_mode == insert",
-        "bindings": {
-            // "j k": "vim::NormalBefore"
-        }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
     },
-    // Custom Space leader key bindings (adicione isso no final do seu keymap.json, antes do último colchete)
-    {
-        "context": "Workspace && !Terminal",
-        "use_key_equivalents": true,
-        "bindings": {
-            "space e": "workspace::ToggleRightDock",
-            "space k": "project_panel::ToggleFocus",
-            "space space": "file_finder::Toggle",
-            "space ,": "tab_switcher::Toggle",
-            "space s g": "pane::DeploySearch",
-            "space p": "command_palette::Toggle",
-            "space g g": "git_panel::ToggleFocus",
-            "ctrl-t": "workspace::ToggleBottomDock"
-        }
+  },
+  // Custom Space leader key bindings (adicione isso no final do seu keymap.json, antes do último colchete)
+  {
+    "context": "Workspace && !Terminal",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-t": "workspace::ToggleBottomDock",
     },
-    {
-        "context": "Editor && !Terminal",
-        "use_key_equivalents": true,
-        "bindings": {
-            "space g i": "editor::GoToImplementation",
-            "space g d": "editor::GoToDefinition",
-            "space g b": "pane::GoBack",
-            "space g t": "editor::GoToTypeDefinition",
-            "space g r": "editor::FindAllReferences",
-            "space n e": "editor::GoToDiagnostic",
-            "space p e": "editor::GoToPreviousDiagnostic",
-            "space c a": "editor::ToggleCodeActions",
-            "space k": "editor::Hover",
-            "space c r": "editor::Rename",
-            "space c s": "outline::Toggle"
-        }
+  },
+  {
+    "context": "Workspace && !Terminal && vim_mode != insert",
+    "use_key_equivalents": true,
+    "bindings": {
+      "space e": "workspace::ToggleRightDock",
+      "space k": "project_panel::ToggleFocus",
+      "space space": "file_finder::Toggle",
+      "space ,": "tab_switcher::Toggle",
+      "space s g": "pane::DeploySearch",
+      "space p": "command_palette::Toggle",
+      "space g g": "git_panel::ToggleFocus",
+      "ctrl-t": "workspace::ToggleBottomDock",
     },
-    {
-        "context": "VimControl",
-        "use_key_equivalents": true,
-        "bindings": {
-            "ctrl-t": "workspace::ToggleBottomDock"
-        }
+  },
+  {
+    "context": "Editor && !Terminal && vim_mode == insert",
+    "use_key_equivalents": true,
+    "bindings": {
+      "space g i": "editor::GoToImplementation",
+      "space g d": "editor::GoToDefinition",
+      "space g b": "pane::GoBack",
+      "space g t": "editor::GoToTypeDefinition",
+      "space g r": "editor::FindAllReferences",
+      "space n e": "editor::GoToDiagnostic",
+      "space p e": "editor::GoToPreviousDiagnostic",
+      "space c a": "editor::ToggleCodeActions",
+      "space k": "editor::Hover",
+      "space c r": "editor::Rename",
+      "space c s": "outline::Toggle",
     },
-    {
-        "context": "Workspace",
-        "use_key_equivalents": true,
-        "bindings": {
-            // "ctrl-t": "terminal_panel::ToggleFocus"
-        }
+  },
+  {
+    "context": "VimControl",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-t": "workspace::ToggleBottomDock",
     },
-    {
-        "context": "ProjectPanel",
-        "use_key_equivalents": true,
-        "bindings": {
-            "n": "project_panel::NewFile",
-            "f": "project_panel::NewDirectory",
-            "r": "project_panel::Rename",
-            "d": "project_panel::Delete",
-            "x": "project_panel::Cut",
-            "c": "project_panel::Copy",
-            "p": "project_panel::Paste"
-        }
-    }
+  },
+  {
+    "context": "Workspace",
+    "use_key_equivalents": true,
+    "bindings": {
+      // "ctrl-t": "terminal_panel::ToggleFocus"
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "use_key_equivalents": true,
+    "bindings": {
+      "n": "project_panel::NewFile",
+      "f": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+    },
+  },
 ]
-
