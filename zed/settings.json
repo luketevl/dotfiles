@@ -7,38 +7,46 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "project_panel": {
-        "dock": "right"
-    },
-    "vim": {
-        "use_system_clipboard": "always",
-        "use_multiline_find": true,
-        "custom_digraphs": {},
-        "use_smartcase_find": true
-    },
-    "vim_mode_change": {
-        "normal": [],
-        "insert": []
-    },
-    "vim_mode": true,
-    "wsl_connections": [
+  "ui_font_family": "Consolas",
+  "buffer_font_family": "Consolas",
+  "project_panel": {
+    "dock": "right",
+  },
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_multiline_find": true,
+    "custom_digraphs": {},
+    "use_smartcase_find": true,
+  },
+  "vim_mode_change": {
+    "normal": [],
+    "insert": [],
+  },
+  "vim_mode": true,
+  "wsl_connections": [
+    {
+      "distro_name": "archlinux",
+      "user": null,
+      "projects": [
         {
-            "distro_name": "archlinux",
-            "user": null,
-            "projects": [
-                {
-                    "paths": ["/home/souzals/Projects/SFI_Backend_Hive"]
-                }
-            ]
-        }
-    ],
-    "icon_theme": "Catppuccin Mocha",
-    "ui_font_size": 16,
-    "buffer_font_size": 15,
-    "theme": {
-        "mode": "system",
-        "light": "One Light",
-        "dark": "Catppuccin Mocha"
-    }
+          "paths": ["/home/souzals/Projects/SFI_Backend_Hive"],
+        },
+      ],
+    },
+  ],
+  "icon_theme": "Catppuccin Mocha",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha",
+  },
+  "lsp": {
+    "eslint": {
+      "settings": {
+        "nodePath": "./node_modules",
+      },
+    },
+  },
 }
-
