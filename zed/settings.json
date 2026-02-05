@@ -1,4 +1,4 @@
-d settings
+// Zed settings
 //
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
@@ -24,10 +24,17 @@ d settings
       "user": null,
       "projects": [
         {
-          "paths": ["/home/souzals/Projects/SFI_Backend_Hive"],
+          "paths": [
+            "/home/souzals/Projects/SFI_Atendimento_Workflow"
+          ]
         },
-      ],
-    },
+        {
+          "paths": [
+            "/home/souzals/Projects/SFI_Backend_Hive"
+          ]
+        }
+      ]
+    }
   ],
   "icon_theme": "Catppuccin Mocha",
   "ui_font_size": 16,
@@ -45,3 +52,4 @@ d settings
     },
   },
 }
+
