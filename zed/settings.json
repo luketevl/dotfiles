@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "terminal": {
+    "shell": "system"
+  },
   "ui_font_family": "Consolas",
   "buffer_font_family": "Consolas",
   "project_panel": {
@@ -24,17 +27,13 @@
       "user": null,
       "projects": [
         {
-          "paths": [
-            "/home/souzals/Projects/SFI_Atendimento_Workflow"
-          ]
+          "paths": ["/home/souzals/Projects/SFI_Atendimento_Workflow"],
         },
         {
-          "paths": [
-            "/home/souzals/Projects/SFI_Backend_Hive"
-          ]
-        }
-      ]
-    }
+          "paths": ["/home/souzals/Projects/SFI_Backend_Hive"],
+        },
+      ],
+    },
   ],
   "icon_theme": "Catppuccin Mocha",
   "ui_font_size": 16,
@@ -42,7 +41,11 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Catppuccin Mocha",
+    "dark": "Catppuccin Macchiato",
+  },
+  "experimental.theme_overrides": {
+    "editor.indent_guide": "#3e4451",
+    "editor.indent_guide_active": "#fab387"
   },
   "lsp": {
     "eslint": {
@@ -52,4 +55,3 @@
     },
   },
 }
-
