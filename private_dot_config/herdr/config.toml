@@ -1,0 +1,53 @@
+onboarding = false
+[keys]
+prefix = "ctrl+s"
+split_vertical = "prefix+v"
+split_horizontal = "prefix+b"
+toggle_sidebar = "prefix+e"
+edit_scrollback = "prefix+t"
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+1"
+swap_pane_left = "prefix+shift+h"
+swap_pane_down = "prefix+shift+j"
+swap_pane_up = "prefix+shift+k"
+swap_pane_right = "prefix+shift+1"
+workspace_picker = "prefix+s"
+settings = "prefix+shift+s"
+copy_mode = "prefix+["
+close_pane = "prefix+x"
+zoom = "prefix+z"
+new_tab = "prefix+c"
+rename_tab = "prefix+,"
+new_workspace = "prefix+shift+c"
+close_workspace = "prefix+shift+d"
+next_tab = "prefix+n"
+previous_tab = "prefix+p"
+resize_mode = "prefix+r"
+next_agent = "prefix+a"
+goto = "prefix+space"
+reload_config = "prefix+shift+r"
+
+[[keys.command]]
+key = "prefix+ctrl+p"
+type = "plugin_action"
+command = "cloudmanic.herdr-plus.projects"
+description = "herdr-plus: projects"
+
+[[keys.command]]
+key = "prefix+ctrl+a"
+type = "plugin_action"
+command = "cloudmanic.herdr-plus. quick-actions"
+description = "herdr-plus: quick actions"
+
+[ui]
+sidebar_width = 18
+sidebar_min_width = 18
+show_agent_labels_on_pane_borders = true
+
+[theme]
+name = "catppucin"
+
+[experimental]
+pane_history = true

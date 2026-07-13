@@ -1,0 +1,109 @@
+{
+  // Waybar at top layer
+  "layer": "top",
+  "reload_on_style_change": true,
+
+  // Waybar position (top|bottom|left|right)
+  "position": "top",
+
+  // Waybar height (to be removed for auto height)
+  // "height": 10,
+
+  "passthrough": false,
+  "reload_style_on_change": true,
+
+  // Gaps between modules (4px)
+  "spacing": 10,
+
+  // Gap from the top of the screen
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "margin-bottom": 1,
+
+  // Choose the order of the modules
+  "modules-left": ["custom/icon", "hyprland/window", "hyprland/workspaces"],
+  "modules-center": [],
+  "modules-right": ["pulseaudio", "tray", "notification", "clock"],
+
+  "custom/icon": {
+    "format": "󰣇"
+  },
+ "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+        "default": ["🔈", "🔉", ""]
+    },
+    "on-click": "pavucontrol"
+},
+
+  "hyprland/window": {
+    "separate-outputs": true,
+    //"max-length": 20,
+    "format": "{class}"
+    }
+  },
+
+  // Per-module config
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10"
+    }
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 5,
+    "show-passive-items": true,
+    "icons": {
+     "Network": "󰈁" 
+    }
+  },
+
+  "clock": {
+    "format": "<span></span>  {:%H:%M}",
+    "interval": 1,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#eed49f'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "shift_down",
+      "on-click": "shift_up"
+    }
+  },
+  "notification": {
+  "tooltip": true,
+  "format": "{icon}",
+    "on-click": "swaync-client -t",
+  "format-icons": {
+    "notification": "",
+    "none": "",
+    "dnd-notification": "",
+    "dnd-none": "󰂛"
+  }
+}
+//"custom/speedtest": {
+ // "exec": "~/.config/waybar/scripts/speedtest.sh",
+  //"interval": 300,
+  //"tooltip": true
+//}
+
+
+}
+
