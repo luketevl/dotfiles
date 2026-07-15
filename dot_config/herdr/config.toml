@@ -26,7 +26,8 @@ next_tab = "prefix+n"
 previous_tab = "prefix+p"
 resize_mode = "prefix+r"
 next_agent = "prefix+a"
-goto = "prefix+space"
+# prefix+space reservado para popup fzf files.
+goto = "prefix+g"
 reload_config = "prefix+shift+r"
 
 [[keys.command]]
@@ -42,6 +43,14 @@ command = "cloudmanic.herdr-plus. quick-actions"
 description = "herdr-plus: quick actions"
 
 # v0.7.4: popup panes abrem flutuando, sem mexer no layout tiled da aba.
+[[keys.command]]
+key = "prefix+space"
+type = "popup"
+command = "fzf"
+description = "popup: fzf files"
+width = "85%"
+height = "85%"
+
 [[keys.command]]
 key = "prefix+alt+g"
 type = "popup"
