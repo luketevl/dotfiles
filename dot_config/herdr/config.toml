@@ -31,6 +31,12 @@ goto = "prefix+g"
 reload_config = "prefix+shift+r"
 
 [[keys.command]]
+key = "prefix+ctrl+o"
+type = "shell"
+command = "gh repo view --web"
+description = "Abrir repositorio no navegador"
+
+[[keys.command]]
 key = "prefix+ctrl+p"
 type = "plugin_action"
 command = "cloudmanic.herdr-plus.projects"
@@ -39,14 +45,14 @@ description = "herdr-plus: projects"
 [[keys.command]]
 key = "prefix+ctrl+a"
 type = "plugin_action"
-command = "cloudmanic.herdr-plus. quick-actions"
+command = "cloudmanic.herdr-plus.quick-actions"
 description = "herdr-plus: quick actions"
 
 # v0.7.4: popup panes abrem flutuando, sem mexer no layout tiled da aba.
 [[keys.command]]
 key = "prefix+space"
 type = "popup"
-command = "fzf"
+command = "file=$(fzf) && [ -n \"$file\" ] && nvim -- \"$file\""
 description = "popup: fzf files"
 width = "85%"
 height = "85%"
@@ -92,7 +98,7 @@ row_gap = 0
 rows = [["state_icon", "workspace"], ["branch", "git_status"]]
 
 [theme]
-name = "catppucin"
+name = "catppuccin"
 
 [experimental]
 pane_history = true
