@@ -7,8 +7,11 @@ README.md
 .config/herdr/plugins.json
 
 {{ if eq .profile "omarchy" }}
-# Omarchy gerencia Hyprland (Lua), tema, barra, terminal e shell.
-.config/hypr
+# Omarchy usa Hyprland em Lua: so os overrides pessoais entram.
+.config/hypr/hyprland.conf
+.config/hypr/mocha.conf
+.config/hypr/config.jsonc
+# Omarchy gerencia tema, barra, terminal e shell.
 .config/waybar
 .config/kitty
 .config/starship.toml
@@ -30,7 +33,8 @@ README.md
 .config/pavucontrol.ini
 .config/yay
 {{ else if eq .profile "arch" }}
-# Arch puro: tudo se aplica. Nada ignorado alem do global.
+# Arch puro: hyprland.conf se aplica; overrides Lua sao so do Omarchy.
+.config/hypr/*.lua
 {{ else }}
 # Outras distros: sem configs de WM especificas do Arch
 .config/hypr
