@@ -1,7 +1,7 @@
 eval "$(starship init zsh)" 
-source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -r ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh ]] && source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+[[ -r /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -r /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -10,7 +10,7 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/luketevl/.zshrc'
+zstyle :compinstall filename '{{ .chezmoi.homeDir }}/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -26,7 +26,7 @@ export TMUX_CONF="$HOME/dotfiles/.tmux.config"
 
 
 # opencode
-export PATH=/home/luketevl/.opencode/bin:$PATH
+export PATH={{ .chezmoi.homeDir }}/.opencode/bin:$PATH
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

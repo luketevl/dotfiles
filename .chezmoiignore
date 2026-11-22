@@ -1,0 +1,41 @@
+README.md
+**/.keep
+**/state.json
+**/*_bkp
+
+# Estado local de plugins (caminhos absolutos, gerado pelo herdr)
+.config/herdr/plugins.json
+
+{{ if eq .profile "omarchy" }}
+# Omarchy gerencia Hyprland (Lua), tema, barra, terminal e shell.
+.config/hypr
+.config/waybar
+.config/kitty
+.config/starship.toml
+.config/mimeapps.list
+.config/herdr/config.toml
+.config/lazygit
+.bashrc
+.config/tmux
+.config/gitlab
+.pi/agent/settings.json
+.pi/agent/themes
+.pi/settings.json
+# Setup antigo (GTK/nwg/X11) nao se aplica
+.config/gtk-3.0
+.config/gtk-4.0
+.config/nwg-look
+.config/nwg-bar
+.config/xsettingsd
+.config/pavucontrol.ini
+.config/yay
+{{ else if eq .profile "arch" }}
+# Arch puro: tudo se aplica. Nada ignorado alem do global.
+{{ else }}
+# Outras distros: sem configs de WM especificas do Arch
+.config/hypr
+.config/waybar
+.config/yay
+.config/nwg-bar
+.config/nwg-look
+{{ end }}

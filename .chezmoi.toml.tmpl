@@ -1,0 +1,11 @@
+{{- /* Detecta o perfil: omarchy (Arch + Omarchy) ou arch (Arch puro/outros) */ -}}
+{{- $profile := "linux" -}}
+{{- if eq .chezmoi.osRelease.id "arch" -}}
+{{-   $profile = "arch" -}}
+{{- end -}}
+{{- if stat "/usr/share/omarchy" -}}
+{{-   $profile = "omarchy" -}}
+{{- end -}}
+
+[data]
+  profile = {{ $profile | quote }}
