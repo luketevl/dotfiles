@@ -10,24 +10,21 @@ $directory\
 $git_branch\
 $git_status\
 [](fg:#FCA17D bg:#86BBD8)\
-$c\
-$elixir\
-$elm\
-$golang\
-$gradle\
-$haskell\
-$java\
-$julia\
-$maven\
 $nodejs\
 $bun\
-$nim\
-$rust\
-$scala\
+$deno\
+$python\
+$package\
 [](fg:#86BBD8 bg:#06969A)\
+${custom.ai}\
+${env_var.ANTHROPIC_API_KEY}\
+${env_var.OPENAI_API_KEY}\
+${env_var.OPENROUTER_API_KEY}\
+${env_var.GEMINI_API_KEY}\
 $docker_context\
 [](fg:#06969A bg:#33658A)\
 $time\
+$cmd_duration\
 [ ](fg:#33658A)\
 """
 
@@ -68,30 +65,10 @@ truncation_symbol = "…/"
 # So either put "Important Documents" before "Documents" or use the substituted version:
 # "Important 󰈙 " = " 󰈙 "
 
-[c]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[cpp]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
 [docker_context]
 symbol = " "
 style = "bg:#06969A"
 format = '[ $symbol $context ]($style)'
-
-[elixir]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[elm]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
@@ -101,43 +78,6 @@ format = '[ $symbol $branch ]($style)'
 [git_status]
 style = "bg:#FCA17D"
 format = '[$all_status$ahead_behind ]($style)'
-
-[golang]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[gradle]
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[haskell]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[java]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[jj_bookmark]
-symbol = ""
-style = "bg:#FCA17D"
-format = '[ $symbol $bookmark(@$remote)$diverged( \\(+$overflow_count others\\)) ]($style)'
-
-[jj_status]
-style = "bg:#FCA17D"
-format = '[$all ]($style)'
-
-[julia]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[maven]
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 symbol = ""
@@ -149,23 +89,53 @@ symbol = ""
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
-[nim]
-symbol = "󰆥 "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[rust]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[scala]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
 format = '[ ♥ $time ]($style)'
+
+[deno]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version)(\\($virtualenv\\)) ]($style)'
+
+[package]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol $version ]($style)'
+
+[cmd_duration]
+min_time = 2000
+style = "bg:#33658A"
+format = '[ 󱎫 $duration ]($style)'
+
+# Projeto preparado para agentes (Claude Code, pi, etc.)
+[custom.ai]
+detect_files = ["CLAUDE.md", "AGENTS.md"]
+detect_folders = [".claude", ".pi"]
+symbol = "󰚩"
+style = "bg:#06969A"
+format = '[ $symbol ]($style)'
+
+# Chaves de API carregadas no shell: mostra so o provedor, nunca o valor
+[env_var.ANTHROPIC_API_KEY]
+style = "bg:#06969A"
+format = '[ claude ]($style)'
+
+[env_var.OPENAI_API_KEY]
+style = "bg:#06969A"
+format = '[ openai ]($style)'
+
+[env_var.OPENROUTER_API_KEY]
+style = "bg:#06969A"
+format = '[ openrouter ]($style)'
+
+[env_var.GEMINI_API_KEY]
+style = "bg:#06969A"
+format = '[ gemini ]($style)'

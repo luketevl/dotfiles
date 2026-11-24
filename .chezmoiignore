@@ -18,9 +18,6 @@ README.md
 .bashrc
 .config/tmux
 .config/gitlab
-.pi/agent/settings.json
-.pi/agent/themes
-.pi/settings.json
 # Setup antigo (GTK/nwg/X11) nao se aplica
 .config/gtk-3.0
 .config/gtk-4.0
