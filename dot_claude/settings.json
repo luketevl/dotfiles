@@ -1,6 +1,4 @@
 {
-  "theme": "auto",
-  "skipDangerousModePermissionPrompt": true,
   "permissions": {
     "defaultMode": "bypassPermissions"
   },
@@ -8,5 +6,7 @@
     "type": "command",
     "command": "~/.claude/statusline.sh",
     "padding": 0
-  }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "auto"
 }
