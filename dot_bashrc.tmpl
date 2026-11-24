@@ -5,6 +5,10 @@
 # If not running interactively, don't do anything else (leave this above the rc source)
 [[ $- != *i* ]] && return
 
+# ble.sh: sugestao do historico em cinza (aceita com →) e realce de sintaxe.
+# Carrega antes de tudo e so se conecta no fim do arquivo (ble-attach).
+[[ -f ~/.local/share/blesh/ble.sh ]] && source ~/.local/share/blesh/ble.sh --attach=none
+
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
 source "$OMARCHY_PATH/default/bash/rc"
@@ -13,6 +17,9 @@ source "$OMARCHY_PATH/default/bash/rc"
 #
 # Make an alias for invoking commands you use constantly
 # alias p='python'
+
+# ble.sh: deve ser a ultima linha
+[[ ${BLE_VERSION-} ]] && ble-attach
 {{- else -}}
 #
 # ~/.bashrc
