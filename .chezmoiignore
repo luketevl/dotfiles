@@ -13,8 +13,6 @@ README.md
 .config/hypr/config.jsonc
 # Omarchy gerencia tema, barra, terminal e shell.
 .config/waybar
-.config/kitty
-.config/starship.toml
 .config/mimeapps.list
 .config/lazygit
 .bashrc
