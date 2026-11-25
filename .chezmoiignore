@@ -26,9 +26,12 @@ README.md
 .config/pavucontrol.ini
 .config/yay
 {{ else if eq .profile "arch" }}
+# Config do shell do Omarchy (barra, idle) so existe no Omarchy
+.config/omarchy
 # Arch puro: hyprland.conf se aplica; overrides Lua sao so do Omarchy.
 .config/hypr/*.lua
 {{ else }}
+.config/omarchy
 # Outras distros: sem configs de WM especificas do Arch
 .config/hypr
 .config/waybar
